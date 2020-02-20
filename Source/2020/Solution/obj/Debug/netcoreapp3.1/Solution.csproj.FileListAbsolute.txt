@@ -1,0 +1,11 @@
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\obj\Debug\netcoreapp3.1\Solution.csprojAssemblyReference.cache
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\obj\Debug\netcoreapp3.1\Solution.AssemblyInfoInputs.cache
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\obj\Debug\netcoreapp3.1\Solution.AssemblyInfo.cs
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.exe
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.deps.json
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.runtimeconfig.json
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.runtimeconfig.dev.json
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.dll
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\bin\Debug\netcoreapp3.1\Solution.pdb
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\obj\Debug\netcoreapp3.1\Solution.dll
+D:\Dev Files\Repositories\organize\hash-code\Source\2020\Solution\obj\Debug\netcoreapp3.1\Solution.pdb
