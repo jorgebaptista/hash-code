@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Solution
 {
@@ -33,7 +34,10 @@ namespace Solution
             #region Input read and variable assignment
 
             // Read the input file
-            string[] input = System.IO.File.ReadAllLines(@"..\Input\a_example.txt");
+            //d_tough_choices
+            //e_so_many_books
+            //f_libraries_of_the_world
+            string[] input = System.IO.File.ReadAllLines(@"..\Input\c_incunabula.txt");
 
             // Separate first line by spaces and convert all array elements to Int for future reference
             int[] line0 = Array.ConvertAll(input[0].Split(' '), int.Parse);
@@ -118,12 +122,12 @@ namespace Solution
                 {
                     int currentLibraryID = signedLibraries[signedLibrary].id;
 
-                    if (signedLibraries[signedLibrary].scannedBooks.Count == libraries[currentLibraryID].totalBooks) break;
-                    else
-                    {
+                    // if (signedLibraries[signedLibrary].scannedBooks.Count == libraries[currentLibraryID].totalBooks) break;
+                    // else
+                    // {
                         for (int scannedBooks = 0; scannedBooks < libraries[currentLibraryID].booksPerDay; scannedBooks++)
                         {
-                            for (int book = 0; book < libraries[currentLibraryID].totalBooks; book++)
+                            for (int book = 0; book < libraries[currentLibraryID].totalBooks - 1; book++)
                             {
                                 int currentBookID = libraries[currentLibraryID].bookSet[book];
 
@@ -135,9 +139,22 @@ namespace Solution
                                 }
                             }
                         }
-                    }
+                    // }
                 }
             }
+
+
+            List<SignedLibrary> signedLibrariesList = signedLibraries.OfType<SignedLibrary>().ToList();
+
+            for (int i = 0; i < signedLibrariesList.Count - 1; i++)
+            {
+                if (signedLibrariesList[i].scannedBooks.Count == 0)
+                {
+                    signedLibrariesList.RemoveAt(i);
+                }
+            }
+
+            signedLibraries = signedLibrariesList.ToArray();
 
             List<string> libraryData = new List<string>();
 
@@ -149,12 +166,7 @@ namespace Solution
                 libraryData.Add(String.Join(" ", signedLibraries[i].scannedBooks));
             }
 
-            foreach (string item in libraryData)
-            {
-                Console.WriteLine(item);
-            }
-
-            System.IO.File.WriteAllLines(@"A.output", libraryData);
+            System.IO.File.WriteAllLines(@"C.output", libraryData);
         }
     }
 }
